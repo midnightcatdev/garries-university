@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The base configuration for WordPress
  *
@@ -19,23 +20,43 @@
  */
 
 // ** MySQL settings - You can get this info from your web host ** //
+
+if (strstr($_SERVER['SERVER_NAME'], 'garriessandbox.local')) {
+	/** The name of the database for WordPress */
+	define('DB_NAME', 'local');
+
+	/** MySQL database username */
+	define('DB_USER', 'root');
+
+	/** MySQL database password */
+	define('DB_PASSWORD', 'root');
+
+	/** MySQL hostname */
+	define('DB_HOST', 'localhost');
+} else {
+	define('DB_NAME', 'u663098933_FCrkk');
+	define('DB_USER', 'u663098933_DB5yy');
+	define('DB_PASSWORD', 'Spashley213!!');
+	define('DB_HOST', 'localhost');
+}
+
 /** The name of the database for WordPress */
-define( 'DB_NAME', 'local' );
+define('DB_NAME', 'local');
 
 /** MySQL database username */
-define( 'DB_USER', 'root' );
+define('DB_USER', 'root');
 
 /** MySQL database password */
-define( 'DB_PASSWORD', 'root' );
+define('DB_PASSWORD', 'root');
 
 /** MySQL hostname */
-define( 'DB_HOST', 'localhost' );
+define('DB_HOST', 'localhost');
 
 /** Database Charset to use in creating database tables. */
-define( 'DB_CHARSET', 'utf8' );
+define('DB_CHARSET', 'utf8');
 
 /** The Database Collate type. Don't change this if in doubt. */
-define( 'DB_COLLATE', '' );
+define('DB_COLLATE', '');
 
 /**
  * Authentication Unique Keys and Salts.
@@ -46,14 +67,14 @@ define( 'DB_COLLATE', '' );
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         'uWGuso8h7AFgPzfjLe2juE2Tgus8FhHHWs7EMOaw875eNNbAt6A/EmsE93j17JTvVSgIWcGKo0LlZUJEMpbtvg==');
-define('SECURE_AUTH_KEY',  'fX2y8j4TCDmHGM/bMaSflwFpZBysddQ1Jaw3vKquPBp1IlxHhuIwrBLwo8KLwqu/vmCC1SMb90HyllUEF6UX4A==');
-define('LOGGED_IN_KEY',    '844t04a4g6WXtuqR6SKQnkWbJ0JfSQ6UpZEWgkkQmDd/Yv1w3xGCN4SLMvHk9WvpihH+OjnWQ0KNk8U92sjPwg==');
-define('NONCE_KEY',        'd2Dplftanvn7SLYvN91guWw6fJeOHWFADFb8SpkOd5tg49zbi6s5WeKw+tvzpfUjaHDHf6nO+4sbdet+q/Ei2g==');
-define('AUTH_SALT',        '+tQB9QWl5ew+GOjL0Tz7tv9gbgP0+SWsY/gG/zn6U6eMaH6iB2RnvfKXu/TMQN69qsSgvLO1WcWPY7oNjWBZMw==');
-define('SECURE_AUTH_SALT', 'EvPPiXYm/wpcswBJASTiWVbhK84sRxuutusz2r2DKWrKZnsh3lG9yDWlPN8dW12FoiCx4oNuO+9gRpC3i4O7Lg==');
-define('LOGGED_IN_SALT',   'oi9OdU/h9qtMrrYyoOI54lbbbUt1nFzboP7kFWTXnAUggSxm6+OZmqhUuZrFTY/YweVjxgqgB1eQHUwsmQqKWg==');
-define('NONCE_SALT',       'Fvvpwdr+jiNs6dGCCr0ntGVzUuvES+zScNOiCtGwRGUSSw6j1Qs0PwHnWhUz3x0Cmyalm9hc5f+zCkOWcoJuXg==');
+define('AUTH_KEY',         'D8ob7s2Nt48PLhTrFMRYMR9YQuj/fQRqjeMn11wREfM5gIhhecwiCFQvY/cTJiUAI7OMP6qNHnASfnT/CvB1pA==');
+define('SECURE_AUTH_KEY',  'lGDF9SAjk4BGgvE//tu4ltyf+NrIyzq5y+eVrOA3Xmh97ksc5KQdi1jxSJC9/DG5mLzF2bqQKqnwGoNfJLFO4g==');
+define('LOGGED_IN_KEY',    'coYrQFoDLWxQ7CJqYLzyuPSI3F/h3u3xs1XhkSzfU9ru50Dwj6B5bGnzqV6RMgA7EUMn/4XfdmNd3c1qvIG7+A==');
+define('NONCE_KEY',        'wl+Fwa6ej/9M5iakvybO83lk6XlB86A7i9vj2n1kbMpWj7RtcRp0hFBXdR9iMSf2LAcNUH+JB1btK2GC4YWLww==');
+define('AUTH_SALT',        'FVn0bzbVPDSwnnk3Mfz4RWGzzMG4ta2H78QE2xQjgUxeA2l+dtSMAc8mfdZCQMd3K8rFew43KsD9ssGZ2giBtQ==');
+define('SECURE_AUTH_SALT', 'tPiXowrjd5BwxCDWOwm3SPvm92pEOCm26x0zhD+nABEYo/nJxYzlbrsbgNwebMYhWu7omrFu1DMzJ0weRvElhw==');
+define('LOGGED_IN_SALT',   'FhgKjX3LedxGxnMMaaUz23zrKq6u2kHWXrJt3owuIFM6d1SMJq+vMkeLxCzkK3OUQYT7lvaZBe62DyVhq2fh3w==');
+define('NONCE_SALT',       '61+TrNjlYUDBVYvVIc6c2miuJrGhFJnAdoKJs9rJ4L/IJqYkm06JXWYHGLuEuShgG0wfAzgWS2hvc2aiiugCRA==');
 
 /**
  * WordPress Database Table prefix.
@@ -69,8 +90,8 @@ $table_prefix = 'wp_';
 /* That's all, stop editing! Happy publishing. */
 
 /** Absolute path to the WordPress directory. */
-if ( ! defined( 'ABSPATH' ) ) {
-	define( 'ABSPATH', dirname( __FILE__ ) . '/' );
+if (!defined('ABSPATH')) {
+	define('ABSPATH', dirname(__FILE__) . '/');
 }
 
 /** Sets up WordPress vars and included files. */
