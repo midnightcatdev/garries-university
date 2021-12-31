@@ -21,24 +21,24 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 
-if (strstr($_SERVER['SERVER_NAME'], 'garriessandbox.local')) {
-	/** The name of the database for WordPress */
-	define('DB_NAME', 'local');
+// if (strstr($_SERVER['SERVER_NAME'], 'garriessandbox.local')) {
+// 	/** The name of the database for WordPress */
+// 	define('DB_NAME', 'local');
 
-	/** MySQL database username */
-	define('DB_USER', 'root');
+// 	/** MySQL database username */
+// 	define('DB_USER', 'root');
 
-	/** MySQL database password */
-	define('DB_PASSWORD', 'root');
+// 	/** MySQL database password */
+// 	define('DB_PASSWORD', 'root');
 
-	/** MySQL hostname */
-	define('DB_HOST', 'localhost');
-} else {
-	define('DB_NAME', 'u663098933_FCrkk');
-	define('DB_USER', 'u663098933_DB5yy');
-	define('DB_PASSWORD', 'Spashley213!!');
-	define('DB_HOST', 'localhost');
-}
+// 	/** MySQL hostname */
+// 	define('DB_HOST', 'localhost');
+// } else {
+// 	define('DB_NAME', 'u663098933_FCrkk');
+// 	define('DB_USER', 'u663098933_DB5yy');
+// 	define('DB_PASSWORD', 'Spashley213!!');
+// 	define('DB_HOST', 'localhost');
+// }
 
 /** The name of the database for WordPress */
 define('DB_NAME', 'local');
